@@ -1,0 +1,420 @@
+/*
+  ========================================
+  Border box
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+/*
+  ========================================
+  Resposive Stuff
+  ========================================
+*/
+
+  
+
+/* mobile smaller then 30em*/
+@media screen and (max-width: 30em) {
+  /*þetta er comment*/
+  .col-1-3{
+    width: 100%;
+  }
+
+  .col-2-3 {
+    width: 100%;
+  }
+
+  .col-1-2 {
+    width: 100%;
+  }
+
+  .col-1{
+    width: 100%
+  }
+  .topmenu{
+      display: none;
+  }
+  .topmenu_rb{
+    display: block;
+  }
+  .topmenu_rb input {
+    display: none;
+  }
+  label,
+  .topmenu_rb ul {
+    border: 1px solid #cecfd5;
+    border-radius: 6px;
+  }
+  label {
+    color: #0087cc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px 9px;
+    transition: all .15s ease;
+  }
+  label:hover {
+    color: #ff7b29;
+  }
+  .topmenu_rb input:checked + label {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #9799a7;
+  }
+  .topmenu_rb nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .15s ease;
+  }
+  .topmenu_rb input:checked ~ nav {
+    max-height: 700px;
+  }
+  .topmenu_rb ul {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .topmenu_rb li {
+    border-bottom: 1px solid #cecfd5;
+  }
+  .topmenu_rb li:last-child {
+    border-bottom: 0;
+  }
+  .topmenu_rb a {
+    color: #0087cc;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  .topmenu_rb a:hover {
+    color: #ff7b29;
+  }
+}
+/*Smaller then 48em*/
+@media screen and (min-width: 30em) {
+  body {
+    margin: 0 auto;
+    width: 48em;
+    background: linear-gradient(#333333, #000000);
+  }
+  /*þetta er comment*/
+  .col-1-3{
+    width: 100%;
+  }
+
+  .col-2-3 {
+    width: 100%;
+  }
+  .col-1-2 {
+    width: 50%;
+    float: left;
+  }
+  .col-1{
+    width: 100%
+  }
+ .topmenu{
+    display: none;
+  }
+  .topmenu_rb{
+    display: block;
+  }
+  .topmenu_rb input {
+    display: none;
+  }
+  label,
+  .topmenu_rb ul {
+    border: 1px solid #cecfd5;
+    border-radius: 6px;
+  }
+  label {
+    color: #0087cc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px 9px;
+    transition: all .15s ease;
+    float: right;
+  }
+  label:hover {
+    color: #ff7b29;
+  }
+  .topmenu_rb input:checked + label {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #9799a7;
+  }
+  .topmenu_rb nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .15s ease;
+  }
+  .topmenu_rb input:checked ~ nav {
+    max-height: 500px;
+  }
+  .topmenu_rb ul {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .topmenu_rb li {
+    border-bottom: 1px solid #cecfd5;
+  }
+  .topmenu_rb li:last-child {
+    border-bottom: 0;
+  }
+  .topmenu_rb a {
+    color: #0087cc;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  .topmenu_rb a:hover {
+    color: #ff7b29;
+  }
+}
+/*Smaller then 60*/
+@media screen and (min-width: 48em) {
+  body {
+    margin: 0 auto;
+    width: 60em;
+    background: linear-gradient(#333333, #000000);
+  }
+  .col-1-3,
+  .col-2-3,
+  .col-1-2 {
+    padding: 0 1em;
+    float:left;
+  }
+  .col-1-3 {
+    width: 33.33%;
+  }
+  .col-2-3 {
+    width: 66.66%;
+  }
+  .col-1-2 {
+    width: 50%;
+  }
+  .col-1{
+    width: 100%
+  }
+
+  .topmenu_rb{
+  display: none;
+  }
+  .topmenu{
+    display: block;
+  }
+}
+
+/*
+  ========================================
+  Base
+  ========================================
+*/
+footer div, footer h4 {
+  margin-top: 1em;
+}
+footer li, footer a{
+  list-style: none;
+  padding-bottom: 5px;
+}
+footer{
+  background-color: grey;
+}
+header nav {
+  margin-top: 1.3em;
+}
+/*
+  ========================================
+  Efnisyfirlit
+  ========================================
+*/
+.topmenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px black solid;
+  text-align: center;
+  background: linear-gradient(#808080, #000);
+  position: relative;
+}
+.topmenu li {
+  display: inline-block;
+  list-style-type: none;
+  padding: .4em .7em;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  margin-left: -5px
+}
+.topmenu a
+{
+  color: white;
+  text-decoration: none;
+}
+.topmenu a:hover
+{
+  color: lightgrey;
+}
+/*
+  ========================================
+  Box positions
+  ========================================
+*/
+article br
+{
+  display: none;
+}
+.box-set
+{
+  height: 350px;
+  position: relative;
+  display: inline;
+  box-sizing: border-box;
+}
+.img-1
+{ 
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.img-2
+{
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.img-3
+{ 
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.img-4
+{
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+/*
+  ========================================
+  Social buttons
+  ========================================
+*/
+.logo-box
+{
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  display: fixed;
+}
+
+.instagram
+{
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 3em;
+  background: rgb(110, 50, 0) url('images/Logo.png') 0 0 no-repeat;
+}
+
+.twitter
+{
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 3em;
+  background: rgb(40, 182, 235) url('images/Logo.png') 0 -3em no-repeat;
+}
+
+.facebook
+{
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 3em;
+  background: rgb(36, 44, 203) url('images/Logo.png') 0 -6em no-repeat;
+}
+
+.googleplus
+{
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 3em;
+  background: rgb(253, 40, 0) url('images/Logo.png') 0 -9em no-repeat;
+}
+
+.instagram:hover
+{
+  position: relative;
+  height: 3em;
+  width: 4em;
+  background: rgb(170, 70, 0) url('images/Logo.png') .5em 0 no-repeat;
+  transition: width .5s, background .8s;
+}
+
+.twitter:hover
+{
+  position: relative;
+  height: 3em;
+  width: 4em;
+  background: rgb(35, 160, 210) url('images/Logo.png') .5em -3em no-repeat;
+  transition: width .5s, background .8s;
+}
+
+.facebook:hover
+{
+  position: relative;
+  height: 3em;
+  width: 4em;
+  background: rgb(36, 60, 270) url('images/Logo.png') .5em -6em no-repeat;
+  transition: width .5s, background .8s;
+}
+
+.googleplus:hover
+{
+  position: relative;
+  height: 3em;
+  width: 4em;
+  background: rgb(255, 69, 0) url('images/Logo.png') .5em -9em no-repeat;
+  transition: width .5s, background .8s;
+}
+
+.container
+{
+  background: #f2f2f2;
+}
+
+input
+{
+  margin: 10px;
+  text-decoration: none;
+  list-style: none;
+}
